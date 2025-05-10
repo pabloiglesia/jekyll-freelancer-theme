@@ -1,0 +1,25 @@
+<!-- regalos Grid Section -->
+<section id="regalos">
+  <div class="container portfolio-flex-grid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>regalos</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="portfolio-flex-row">
+      {% for regalo in site.regalos %}
+      <div class="portfolio-flex-item portfolio-item">
+        <a href="#portfolioModal-{{ regalo.modal-id }}" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="img/regalos/{{ regalo.img }}" class="img-responsive" alt="{{ regalo.alt }}">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
